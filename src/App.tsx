@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -15,6 +14,7 @@ import Terms from "./pages/Terms";
 import AIReport from "./pages/AIReport";
 import PlagiarismReport from "./pages/PlagiarismReport";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 
 const queryClient = new QueryClient();
 
@@ -35,7 +35,7 @@ const App = () => (
           <Route path="/ai-report" element={<AIReport />} />
           <Route path="/plagiarism-report" element={<PlagiarismReport />} />
           <Route path="/blog" element={<Blog />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

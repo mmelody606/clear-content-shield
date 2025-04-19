@@ -1,4 +1,3 @@
-
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -115,7 +114,7 @@ const Blog = () => {
           {/* Blog Posts Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {blogPosts.map((post) => (
-              <div key={post.id} className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 transition-shadow hover:shadow-md">
+              <div key={post.id} className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 transition-shadow hover:shadow-md animate-fade-in">
                 <div className="h-48 overflow-hidden">
                   <img
                     src={post.image}
@@ -135,11 +134,7 @@ const Blog = () => {
                     </Link>
                   </h3>
                   <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                  <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-100">
-                    <div className="flex items-center">
-                      <div className="w-8 h-8 bg-gray-200 rounded-full mr-3"></div>
-                      <span className="text-sm font-medium">{post.author}</span>
-                    </div>
+                  <div className="flex items-center justify-end mt-4 pt-4 border-t border-gray-100">
                     <span className="text-sm text-gray-500">{post.readTime}</span>
                   </div>
                 </div>

@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <section className="bg-gradient-to-r from-blue-50 to-indigo-50 py-16 md:py-24 px-4 md:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        <div className="space-y-6">
+        <div className="space-y-6 animate-fade-up">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
             Detect Plagiarism & AI Content Instantly!
           </h1>
@@ -14,26 +14,26 @@ const HeroSection = () => {
             Ensure academic and professional integrity with our high-accuracy, lightning-fast, and affordably priced content verification tools.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button asChild size="lg" className="px-8 py-6 text-lg">
+            <Button asChild size="lg" className="px-8 py-6 text-lg hover:scale-105 transition-transform">
               <Link to="/plagiarism">Check Plagiarism Now</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="px-8 py-6 text-lg">
+            <Button asChild size="lg" variant="outline" className="px-8 py-6 text-lg hover:scale-105 transition-transform">
               <Link to="/ai-detect">Detect AI Content</Link>
             </Button>
           </div>
         </div>
-        <div className="relative">
-          <div className="bg-white rounded-lg shadow-xl p-6 md:p-8 relative z-10">
+        <div className="relative animate-fade-in">
+          <div className="bg-white rounded-lg shadow-xl p-6 md:p-8 relative z-10 animate-bounce-subtle">
             <img
               src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80"
               alt="Content checking visualization"
               className="w-full h-auto rounded-md mb-6"
             />
             <div className="flex justify-between items-center">
-              <div className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">
+              <div className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium hover:scale-105 transition-transform">
                 98% Accuracy
               </div>
-              <div className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+              <div className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:scale-105 transition-transform">
                 Results in seconds
               </div>
             </div>

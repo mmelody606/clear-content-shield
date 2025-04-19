@@ -156,7 +156,7 @@ const PlagiarismReport = () => {
                       </tr>
                       <tr className="bg-white">
                         <td className="px-6 py-4 font-medium">
-                          Various Sources <10 Matches
+                          Various Sources &lt;10 Matches
                         </td>
                         <td className="px-6 py-4">
                           <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">

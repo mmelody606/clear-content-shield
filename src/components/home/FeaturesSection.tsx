@@ -31,7 +31,7 @@ const FeaturesSection = () => {
         <div className="text-center mb-12 animate-fade-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Us</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Thousands of professionals and students trust us to check and remove plaigiarism and AI content from their documents.
+            Thousands of professionals and students trust us to check and remove plagiarism and AI content from their documents.
           </p>
         </div>
 

@@ -5,7 +5,7 @@ import { Plus, Minus } from "lucide-react";
 const faqs = [
   {
     question: "How accurate is your plagiarism detection?",
-    answer: "We boasts a 98% accuracy rate. Our tools compares your documents against billions of web pages, academic papers, and publications to identify matching text patterns, paraphrasing, and even cleverly disguised plagiarism."
+    answer: "We boast a 98% accuracy rate. Our tools compare your documents against billions of web pages, academic papers, and publications to identify matching text patterns, paraphrasing, and even cleverly disguised plagiarism."
   },
   {
     question: "Can your tool detect AI-generated content?",
@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     question: "How long does it take to get results?",
-    answer: "For most documents, results are delivered within 1 hour. Larger documents (over 200 pages) may take 2 hours to process completely, as we conducts a thorough analysis for maximum accuracy."
+    answer: "For most documents, results are delivered within 1 hour. Larger documents (over 200 pages) may take 2 hours to process completely, as we conduct a thorough analysis for maximum accuracy."
   },
   {
     question: "Is my content secure when I sent it to your agent for checking?",
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     question: "Can I check multiple documents at once?",
-    answer: "Off course, you are allowed to send in multiple documents for checking or remover. However, you may contact us to arrange for bulk processing options."
+    answer: "Of course, you are allowed to send in multiple documents for checking or removal. However, you may contact us to arrange for bulk processing options."
   },
 ];
 

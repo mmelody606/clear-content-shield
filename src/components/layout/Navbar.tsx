@@ -1,21 +1,33 @@
-
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const scrollToPricing = () => {
+    setIsMenuOpen(false);
+    if (location.pathname !== '/') {
+      window.location.href = '/#pricing';
+      return;
+    }
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
     <nav className="bg-white border-b border-gray-200 py-4 px-4 md:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <span className="text-2xl font-bold text-primary">ContentShield</span>
+          <span className="text-2xl font-bold text-primary">PlagLab</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -26,6 +38,12 @@ const Navbar = () => {
           <Link to="/about" className="font-medium text-gray-700 hover:text-primary">
             About Us
           </Link>
+          <button 
+            onClick={scrollToPricing}
+            className="font-medium text-gray-700 hover:text-primary"
+          >
+            Pricing
+          </button>
           <Link to="/ai-report" className="font-medium text-gray-700 hover:text-primary">
             AI Report
           </Link>
@@ -75,6 +93,12 @@ const Navbar = () => {
             >
               About Us
             </Link>
+            <button 
+              onClick={scrollToPricing}
+              className="font-medium text-gray-700 hover:text-primary px-4 text-left"
+            >
+              Pricing
+            </button>
             <Link
               to="/ai-report"
               className="font-medium text-gray-700 hover:text-primary px-4"

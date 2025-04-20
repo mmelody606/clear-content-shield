@@ -1,4 +1,3 @@
-
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/home/HeroSection";
 import PricingSection from "@/components/home/PricingSection";
@@ -8,7 +7,6 @@ import TestimonialsSection from "@/components/home/TestimonialsSection";
 import FAQSection from "@/components/home/FAQSection";
 import CTASection from "@/components/home/CTASection";
 import ComparisonSection from "@/components/home/ComparisonSection";
-import FreeTrialSection from "@/components/home/FreeTrialSection";
 
 const Home = () => {
   return (
@@ -19,7 +17,6 @@ const Home = () => {
       <FeaturesSection />
       <ComparisonSection />
       <TestimonialsSection />
-      <FreeTrialSection />
       <FAQSection />
       <CTASection />
     </Layout>

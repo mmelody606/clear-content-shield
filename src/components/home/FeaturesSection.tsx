@@ -4,22 +4,22 @@ import { Shield, Clock, Database, DollarSign } from "lucide-react";
 const features = [
   {
     title: "Fast Results",
-    description: "Get comprehensive plagiarism and AI detection results in seconds, not hours.",
+    description: "Get full plagiarism and AI detection results less then an hour.",
     icon: Clock,
   },
   {
-    title: "Accurate Detection",
-    description: "Our advanced algorithms identify matches and AI patterns with 98% accuracy.",
+    title: "Accurate Report",
+    description: "We use advanced technology to  identify similarities and AI patterns with 98% accuracy.",
     icon: Shield,
   },
   {
     title: "Secure & Private",
-    description: "All uploads are encrypted and we never store your content after analysis.",
+    description: "We never share your documents with any third party.",
     icon: Database,
   },
   {
     title: "Affordable Pricing",
-    description: "Pay only for what you need with our transparent per-page pricing model.",
+    description: "Pay only for what you need with our transparent pricing model.",
     icon: DollarSign,
   },
 ];
@@ -31,7 +31,7 @@ const FeaturesSection = () => {
         <div className="text-center mb-12 animate-fade-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Us</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Thousands of professionals and students rely on our tools for content verification
+            Thousands of professionals and students trust us to check and remove plaigiarism and AI content from their documents.
           </p>
         </div>
 

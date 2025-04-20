@@ -1,15 +1,15 @@
 
 const testimonials = [
   {
-    quote: "ContentShield helped me ensure my research paper was entirely original. The detailed report highlighted a few unintentional similarities that I was able to revise before submission.",
-    name: "Dr. Priya Sharma",
+    quote: "PlagLab helped me ensure my research paper was entirely original. The detailed report highlighted a few unintentional similarities that I was able to revise before submission.",
+    name: "Dr. Emily Carter",
     role: "Associate Professor",
     image: "https://randomuser.me/api/portraits/women/32.jpg",
   },
   {
-    quote: "As an editor, I need to verify that authors' submissions are original. This tool has streamlined our review process and caught AI-generated content that would have been difficult to spot manually.",
+    quote: "As an editor, I need to verify that authors' submissions are original. This service streamlined our review process and caught AI-generated content that would have been difficult to spot manually.",
     name: "Rajiv Mehta",
-    role: "Journal Editor",
+    role: "Publishing Editor",
     image: "https://randomuser.me/api/portraits/men/42.jpg",
   },
   {

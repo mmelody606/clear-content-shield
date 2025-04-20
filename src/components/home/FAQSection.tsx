@@ -5,7 +5,7 @@ import { Plus, Minus } from "lucide-react";
 const faqs = [
   {
     question: "How accurate is your plagiarism detection?",
-    answer: "Our plagiarism detection tool boasts a 98% accuracy rate. It compares your content against billions of web pages, academic papers, and publications to identify matching text patterns, paraphrasing, and even cleverly disguised plagiarism."
+    answer: "We boasts a 98% accuracy rate. Our tools compares your documents against billions of web pages, academic papers, and publications to identify matching text patterns, paraphrasing, and even cleverly disguised plagiarism."
   },
   {
     question: "Can your tool detect AI-generated content?",
@@ -13,19 +13,19 @@ const faqs = [
   },
   {
     question: "How long does it take to get results?",
-    answer: "For most documents, results are delivered within seconds. Larger documents (over 50 pages) may take 1-2 minutes to process completely, as our system conducts a thorough analysis for maximum accuracy."
+    answer: "For most documents, results are delivered within 1 hour. Larger documents (over 200 pages) may take 2 hours to process completely, as we conducts a thorough analysis for maximum accuracy."
   },
   {
-    question: "Is my content secure when I upload it for checking?",
-    answer: "Absolutely. We employ bank-level SSL encryption for all uploads. Your content is only used for the immediate analysis and is automatically deleted from our servers once the check is complete. We never store or reuse your intellectual property."
+    question: "Is my content secure when I sent it to your agent for checking?",
+    answer: "Absolutely. Your content is only used for the immediate analysis and is automatically deleted from our database once the check is complete. We never store or reuse your intellectual property."
   },
   {
     question: "Do you offer refunds if I'm not satisfied?",
-    answer: "Yes, we offer a 100% satisfaction guarantee. If our tools fail to perform as advertised, you can request a refund within 7 days of your purchase. Please refer to our Refund Policy page for detailed terms and conditions."
+    answer: "Yes, we offer a 100% satisfaction guarantee. If we fial perform as advertised, you can request a refund within 7 days of your purchase. Please refer to our Refund Policy page for detailed terms and conditions."
   },
   {
     question: "Can I check multiple documents at once?",
-    answer: "Currently, our system processes one document at a time to ensure the highest accuracy. However, enterprise customers can contact us for batch processing options."
+    answer: "Off course, you are allowed to send in multiple documents for checking or remover. However, you may contact us to arrange for bulk processing options."
   },
 ];
 

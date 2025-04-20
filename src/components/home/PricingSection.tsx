@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Slider } from "@/components/ui/slider";
 import { Button } from "@/components/ui/button";
@@ -7,115 +6,61 @@ import { Link } from "react-router-dom";
 const PricingSection = () => {
   const [pageCount, setPageCount] = useState<number>(10);
   const basePrice = 30; // Base price per page in INR
+  const whatsappLink = "https://wa.me/+231777477409"; // Replace with your WhatsApp number
   
   const handleSliderChange = (value: number[]) => {
     setPageCount(value[0]);
   };
 
   return (
-    <section className="py-16 px-4 md:px-6 lg:px-8 bg-white">
-      <div className="max-w-6xl mx-auto">
+    <section id="pricing" className="py-16 px-4 md:px-6 lg:px-8 bg-white">
+      <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Simple, Transparent Pricing</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Pay only for what you need with our straightforward per-page pricing model
+            Combined pricing for Plagiarism and AI Content Detection
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Plagiarism Check Pricing */}
-          <div className="bg-white rounded-xl shadow-md p-8 border border-gray-200 hover:shadow-lg transition-shadow">
-            <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold mb-2">Plagiarism Check</h3>
-              <div className="flex justify-center items-baseline">
-                <span className="text-4xl font-bold">₹{basePrice}</span>
-                <span className="text-xl text-gray-500 ml-1">/page</span>
-              </div>
-            </div>
+        <div className="bg-white rounded-xl shadow-md p-8 border border-gray-200 hover:shadow-lg transition-shadow mb-8">
+          <table className="w-full">
+            <thead>
+              <tr className="border-b-2 border-gray-200">
+                <th className="text-left py-4 px-2">Page Range</th>
+                <th className="text-right py-4 px-2">Price (INR)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-gray-100">
+                <td className="py-4 px-2">0 – 20 Pages</td>
+                <td className="text-right py-4 px-2">₹30</td>
+              </tr>
+              <tr className="border-b border-gray-100">
+                <td className="py-4 px-2">21 – 50 Pages</td>
+                <td className="text-right py-4 px-2">₹50</td>
+              </tr>
+              <tr className="border-b border-gray-100">
+                <td className="py-4 px-2">51 – 100 Pages</td>
+                <td className="text-right py-4 px-2">₹100</td>
+              </tr>
+              <tr className="border-b border-gray-100">
+                <td className="py-4 px-2">101 – 150 Pages</td>
+                <td className="text-right py-4 px-2">₹250</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-            <div className="mb-8">
-              <p className="text-gray-600 mb-6">Pages to check:</p>
-              <Slider
-                defaultValue={[pageCount]}
-                max={100}
-                min={1}
-                step={1}
-                onValueChange={handleSliderChange}
-                className="mb-4"
-              />
-              <div className="flex justify-between text-sm text-gray-500">
-                <span>1</span>
-                <span>50</span>
-                <span>100</span>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 p-6 rounded-lg mb-8">
-              <div className="flex justify-between mb-3">
-                <span className="font-medium">Pages</span>
-                <span className="font-medium">{pageCount}</span>
-              </div>
-              <div className="flex justify-between mb-3">
-                <span>Price per page</span>
-                <span>₹{basePrice}</span>
-              </div>
-              <div className="pt-3 border-t border-gray-200 flex justify-between font-bold">
-                <span>Total</span>
-                <span>₹{pageCount * basePrice}</span>
-              </div>
-            </div>
-
-            <Button asChild size="lg" className="w-full">
-              <Link to="/plagiarism">Check Plagiarism Now</Link>
-            </Button>
-          </div>
-
-          {/* AI Content Check Pricing */}
-          <div className="bg-white rounded-xl shadow-md p-8 border border-gray-200 hover:shadow-lg transition-shadow">
-            <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold mb-2">AI Content Check</h3>
-              <div className="flex justify-center items-baseline">
-                <span className="text-4xl font-bold">₹{basePrice}</span>
-                <span className="text-xl text-gray-500 ml-1">/page</span>
-              </div>
-            </div>
-
-            <div className="mb-8">
-              <p className="text-gray-600 mb-6">Pages to check:</p>
-              <Slider
-                defaultValue={[pageCount]}
-                max={100}
-                min={1}
-                step={1}
-                onValueChange={handleSliderChange}
-                className="mb-4"
-              />
-              <div className="flex justify-between text-sm text-gray-500">
-                <span>1</span>
-                <span>50</span>
-                <span>100</span>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 p-6 rounded-lg mb-8">
-              <div className="flex justify-between mb-3">
-                <span className="font-medium">Pages</span>
-                <span className="font-medium">{pageCount}</span>
-              </div>
-              <div className="flex justify-between mb-3">
-                <span>Price per page</span>
-                <span>₹{basePrice}</span>
-              </div>
-              <div className="pt-3 border-t border-gray-200 flex justify-between font-bold">
-                <span>Total</span>
-                <span>₹{pageCount * basePrice}</span>
-              </div>
-            </div>
-
-            <Button asChild size="lg" className="w-full">
-              <Link to="/ai-detect">Check AI Content Now</Link>
-            </Button>
-          </div>
+        <div className="text-center">
+          <Button 
+            asChild 
+            size="lg" 
+            className="px-8 py-6 text-lg"
+          >
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+              Get Service Now
+            </a>
+          </Button>
         </div>
       </div>
     </section>

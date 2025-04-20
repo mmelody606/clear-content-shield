@@ -8,7 +8,7 @@ const ComparisonSection = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">How We Compare</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            See why ContentShield stands out from other plagiarism and AI detection tools
+            See why PlagLab stands out from other plagiarism and AI detection tools
           </p>
         </div>
 
@@ -18,10 +18,10 @@ const ComparisonSection = () => {
               <tr>
                 <th className="p-4 text-left bg-gray-100 border">Features</th>
                 <th className="p-4 text-center bg-primary text-white border">
-                  ContentShield
+                  PlagLab
                 </th>
-                <th className="p-4 text-center bg-gray-100 border">Competitor A</th>
-                <th className="p-4 text-center bg-gray-100 border">Competitor B</th>
+                <th className="p-4 text-center bg-gray-100 border">XMaster</th>
+                <th className="p-4 text-center bg-gray-100 border">ResearchExpert</th>
               </tr>
             </thead>
             <tbody>
@@ -32,7 +32,7 @@ const ComparisonSection = () => {
                 <td className="p-4 border bg-white text-center">85%</td>
               </tr>
               <tr>
-                <td className="p-4 border bg-white">AI Content Detection</td>
+                <td className="p-4 border bg-white">AI Detection</td>
                 <td className="p-4 border bg-white text-center">
                   <Check className="h-5 w-5 text-green-500 mx-auto" />
                 </td>
@@ -44,7 +44,7 @@ const ComparisonSection = () => {
                 </td>
               </tr>
               <tr>
-                <td className="p-4 border bg-white">Content Revision Support</td>
+                <td className="p-4 border bg-white">Plag and AI remover support</td>
                 <td className="p-4 border bg-white text-center">
                   <Check className="h-5 w-5 text-green-500 mx-auto" />
                 </td>
@@ -56,7 +56,7 @@ const ComparisonSection = () => {
                 </td>
               </tr>
               <tr>
-                <td className="p-4 border bg-white">Secure Content Handling</td>
+                <td className="p-4 border bg-white">Secure Documents Handling</td>
                 <td className="p-4 border bg-white text-center">
                   <Check className="h-5 w-5 text-green-500 mx-auto" />
                 </td>
@@ -80,7 +80,7 @@ const ComparisonSection = () => {
                 </td>
               </tr>
               <tr>
-                <td className="p-4 border bg-white">Price Per Page</td>
+                <td className="p-4 border bg-white">Starting Price</td>
                 <td className="p-4 border bg-white text-center font-medium">₹30</td>
                 <td className="p-4 border bg-white text-center">₹45</td>
                 <td className="p-4 border bg-white text-center">₹40</td>

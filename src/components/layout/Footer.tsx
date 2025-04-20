@@ -1,12 +1,19 @@
-
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (e: React.MouseEvent, path: string) => {
+    e.preventDefault();
+    navigate(path);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="bg-gray-900 text-white py-12 px-4 md:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div>
-          <h3 className="text-xl font-bold mb-4">ContentShield</h3>
+          <h3 className="text-xl font-bold mb-4">PlagLab</h3>
           <p className="text-gray-300 mb-4">
             Advanced plagiarism and AI content detection for academic and professional integrity.
           </p>
@@ -16,24 +23,24 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li>
-              <Link to="/" className="text-gray-300 hover:text-white">
+              <a href="/" onClick={(e) => handleNavigation(e, '/')} className="text-gray-300 hover:text-white">
                 Home
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="/about" className="text-gray-300 hover:text-white">
+              <a href="/about" onClick={(e) => handleNavigation(e, '/about')} className="text-gray-300 hover:text-white">
                 About Us
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="/blog" className="text-gray-300 hover:text-white">
+              <a href="/blog" onClick={(e) => handleNavigation(e, '/blog')} className="text-gray-300 hover:text-white">
                 Blog
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="/contact" className="text-gray-300 hover:text-white">
+              <a href="/contact" onClick={(e) => handleNavigation(e, '/contact')} className="text-gray-300 hover:text-white">
                 Contact Us
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
@@ -42,19 +49,13 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4">Services</h3>
           <ul className="space-y-2">
             <li>
-              <Link to="/" className="text-gray-300 hover:text-white">
                 Plagiarism Checker
-              </Link>
             </li>
             <li>
-              <Link to="/" className="text-gray-300 hover:text-white">
-                AI Content Detector
-              </Link>
+                AI Content Checker
             </li>
             <li>
-              <Link to="/" className="text-gray-300 hover:text-white">
-                Content Revision
-              </Link>
+                Plag and AI Remover
             </li>
           </ul>
         </div>

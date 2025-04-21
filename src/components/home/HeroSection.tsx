@@ -13,9 +13,9 @@ const HeroSection = () => {
     <section className="bg-gradient-to-r from-blue-50 to-indigo-50 py-16 md:py-24 px-4 md:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-6 animate-fade-up">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-purple-700">
             Check for Plagiarism & AI Content Instantly! Get Your Turnitin Report Fast!
-          </h1>
+            </h1>
           <p className="text-xl text-gray-700 max-w-lg">
             Ensure academic and professional integrity with our high-accuracy, lightning-fast, and affordably priced Services utilizing the latest technology and a team of experts to manually check and edit your academic work.
           </p>

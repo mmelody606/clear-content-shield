@@ -9,7 +9,7 @@ import emailjs from '@emailjs/browser';
 // EmailJS configuration
 const EMAILJS_PUBLIC_KEY = 'DvOicC-eX-xXH_ZKJ';
 const EMAILJS_SERVICE_ID = 'service_contact';
-const EMAILJS_TEMPLATE_ID = 'template_83i1lo8';
+const EMAILJS_TEMPLATE_ID = 'template_dmea1y8';
 
 const Contact = () => {
   useEffect(() => {

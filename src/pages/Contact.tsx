@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -6,7 +6,17 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
 import emailjs from '@emailjs/browser';
 
+// EmailJS configuration
+const EMAILJS_PUBLIC_KEY = 'DvOicC-eX-xXH_ZKJ';
+const EMAILJS_SERVICE_ID = 'service_contact';
+const EMAILJS_TEMPLATE_ID = 'template_83i1lo8';
+
 const Contact = () => {
+  useEffect(() => {
+    // Initialize EmailJS with your public key
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+  }, []);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -23,31 +33,39 @@ const Contact = () => {
     e.preventDefault();
     
     try {
-      await emailjs.send(
-        'service_contact',
-        'template_83i1lo8',
-        {
-          to_email: 'weahchristian@gmail.com',
-          from_name: formData.name,
-          from_email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-        },
-        'DvOicC-eX-xXH_ZKJ'
+      const templateParams = {
+        to_name: 'Admin',
+        to_email: 'weahchristian@gmail.com',
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      };
+
+      const result = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
       );
 
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for contacting us. We'll get back to you soon.",
-      });
+      if (result.text === 'OK') {
+        toast({
+          title: "Message Sent Successfully!",
+          description: "Thank you for contacting us. We'll get back to you soon.",
+          variant: "default",
+        });
 
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        throw new Error('Failed to send message');
+      }
     } catch (error: any) {
       console.error('Email sending error:', error);
       

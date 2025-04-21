@@ -48,10 +48,15 @@ const Contact = () => {
         subject: "",
         message: "",
       });
-    } catch (error) {
+    } catch (error: any) {
+      console.error('Email sending error:', error);
+      
+      const errorMessage = error?.message || "Failed to send message. Please try again later.";
+      const technicalDetails = error?.text || "";
+      
       toast({
-        title: "Error",
-        description: "Failed to send message. Please try again later.",
+        title: "Error Sending Message",
+        description: `${errorMessage}${technicalDetails ? ` (${technicalDetails})` : ''}. Please try again or contact support@PlagLab.com if the issue persists.`,
         variant: "destructive",
       });
     }

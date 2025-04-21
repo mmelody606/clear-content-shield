@@ -83,7 +83,7 @@ const About = () => {
                   <div className="absolute inset-0 rounded-full animate-[spin_3s_linear_infinite] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 blur-sm opacity-75"></div>
                   <div className="absolute inset-0 rounded-full animate-[spin_3s_linear_infinite] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
                   <img
-                    src="shttps://github.com/mmelody606/clear-content-shield/blob/main/src/image/Christian%20Weah%20Picture.jpg"
+                    src="src/image/Christian Weah Picture.jpg"
                     alt="CEO portrait"
                     className="relative w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg transform transition-transform duration-300 group-hover:scale-105"
                   />

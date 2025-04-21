@@ -32,7 +32,7 @@ const HeroSection = () => {
         <div className="relative animate-fade-in">
           <div className="bg-white rounded-lg shadow-xl p-6 md:p-8 relative z-10 animate-bounce-subtle">
             <img
-              src="/public/image/vector_hero.jpg"
+              src="public/image/vector_hero.jpg"
               alt="Content checking visualization"
               className="w-full h-auto rounded-md mb-6"
             />

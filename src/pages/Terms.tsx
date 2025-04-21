@@ -13,7 +13,7 @@ const Terms = () => {
 
           <div className="prose prose-lg max-w-none">
             <p>
-              Welcome to ContentShield. These Terms and Conditions ("Terms") govern your use of our website and services for plagiarism and AI content detection (collectively, "Services"). By accessing or using our Services, you agree to be bound by these Terms. If you disagree with any part of these Terms, you may not access the Services.
+              Welcome to PlagLab. These Terms and Conditions ("Terms") govern your use of our website and services for plagiarism and AI content detection (collectively, "Services"). By accessing or using our Services, you agree to be bound by these Terms. If you disagree with any part of these Terms, you may not access the Services.
             </p>
 
             <h2>1. Use of Services</h2>
@@ -120,11 +120,6 @@ const Terms = () => {
             <p>
               If you have any questions about these Terms, please contact us:
             </p>
-            <ul>
-              <li>By email: legal@contentshield.com</li>
-              <li>By phone: +91 123 456 7890</li>
-              <li>By mail: 123 Tech Park, Bengaluru, India</li>
-            </ul>
           </div>
         </div>
       </div>

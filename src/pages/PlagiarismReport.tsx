@@ -1,9 +1,9 @@
-
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const PlagiarismReport = () => {
+  const whatsappLink = "https://wa.me/+231777477409"; // Replace with your WhatsApp number
   return (
     <Layout>
       <div className="py-12 px-4 md:px-6 lg:px-8">
@@ -235,23 +235,18 @@ const PlagiarismReport = () => {
                   We recommend reviewing the highlighted sections and ensuring all borrowed content is properly cited according to the appropriate style guide. For academic submissions, reducing the similarity score to below 15% is typically recommended.
                 </p>
               </div>
-
-              <div className="flex justify-center space-x-4">
-                <Button asChild>
-                  <Link to="/contact">Get Your Own Report</Link>
-                </Button>
-                <Button variant="outline">Download Sample (PDF)</Button>
-              </div>
             </div>
           </div>
 
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 text-center">
-            <h2 className="text-2xl font-bold mb-4">Ready to check your content for plagiarism?</h2>
+            <h2 className="text-2xl font-bold mb-4"> Are you interesting in checking for plagiarism?</h2>
             <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-              Our plagiarism detection tool provides detailed reports like this one, helping you ensure content originality and proper citation.
+              We provide provides detailed reports like this one, helping you ensure content originality and proper citation.
             </p>
             <Button asChild size="lg">
-              <Link to="/">Try It Now</Link>
+              <Link to={whatsappLink} target="_blank" rel="noopener noreferrer">
+                Contact Us on WhatsApp
+              </Link>
             </Button>
           </div>
         </div>

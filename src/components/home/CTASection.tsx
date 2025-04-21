@@ -10,7 +10,7 @@ const CTASection = () => {
           Ready to ensure your academic paper or document is 100% original?
         </h2>
         <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
-          Join thousands of students, researchers, and content creators who trust MasterCheck for maintaining integrity and originality.
+          Join thousands of students, researchers, and content creators who trust PlagLab for maintaining integrity and originality.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button asChild size="lg" variant="secondary" className="text-primary font-bold px-8">

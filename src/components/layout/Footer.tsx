@@ -15,7 +15,7 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-bold mb-4">PlagLab</h3>
           <p className="text-gray-300 mb-4">
-            Advanced plagiarism and AI content detection for academic and professional integrity.
+            We passionately check and remove plagiarism and AI content  for academic and professional integrity.
           </p>
         </div>
 
@@ -89,7 +89,7 @@ const Footer = () => {
 
       <div className="max-w-7xl mx-auto mt-8 pt-8 border-t border-gray-800 text-center">
         <p className="text-gray-400">
-          &copy; {new Date().getFullYear()} ContentShield. All rights reserved.
+          &copy; {new Date().getFullYear()} PlagLab. All rights reserved.
         </p>
       </div>
     </footer>

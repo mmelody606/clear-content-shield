@@ -1,9 +1,9 @@
-
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const AIReport = () => {
+  const whatsappLink = "https://wa.me/+231777477409"; // Replace with your WhatsApp number
   return (
     <Layout>
       <div className="py-12 px-4 md:px-6 lg:px-8">
@@ -11,7 +11,7 @@ const AIReport = () => {
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-4">AI Content Detection Report</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Sample report demonstrating our AI content detection capabilities
+              Sample report demonstrating our AI checking capabilities
             </p>
           </div>
 
@@ -202,23 +202,18 @@ const AIReport = () => {
                   For academic submissions, this level of AI generation would typically be flagged for academic integrity review. For professional settings, transparency about AI use is recommended.
                 </p>
               </div>
-
-              <div className="flex justify-center space-x-4">
-                <Button asChild>
-                  <Link to="/contact">Get Your Own Report</Link>
-                </Button>
-                <Button variant="outline">Download Sample (PDF)</Button>
-              </div>
             </div>
           </div>
 
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 text-center">
-            <h2 className="text-2xl font-bold mb-4">Interested in checking your content?</h2>
+            <h2 className="text-2xl font-bold mb-4"> Are You Interested in getting your Turnitin AI Report?</h2>
             <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-              Our AI content detector provides detailed reports like this one, helping you ensure content originality and transparency.
+              We provide detailed reports like this one, helping you ensure content originality and transparency.
             </p>
             <Button asChild size="lg">
-              <Link to="/">Try It Now</Link>
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                Contact Us on WhatsApp 
+              </a>
             </Button>
           </div>
         </div>

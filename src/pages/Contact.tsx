@@ -1,10 +1,10 @@
-
 import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -19,23 +19,42 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
     
-    // Show success toast
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you soon.",
-    });
-    
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
+    try {
+      await emailjs.send(
+        'service_contact',
+        'template_83i1lo8',
+        {
+          to_email: 'weahchristian@gmail.com',
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        'DvOicC-eX-xXH_ZKJ'
+      );
+
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for contacting us. We'll get back to you soon.",
+      });
+
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
@@ -53,7 +72,7 @@ const Contact = () => {
             <div>
               <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
               <p className="text-gray-700 mb-6">
-                Fill out the form and our team will get back to you within 24 hours. We're happy to answer any questions you have about our plagiarism and AI content detection services.
+                Fill out the form and our team will get back to you within 24 hours. We're happy to answer any questions you have about our plagiarism and AI content checking and remover services.
               </p>
 
               <div className="space-y-6">
@@ -65,7 +84,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-bold">Email Us</h3>
-                    <p className="text-gray-700">support@contentshield.com</p>
+                    <p className="text-gray-700">support@PlagLab.com</p>
                   </div>
                 </div>
 
@@ -77,7 +96,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-bold">Call Us</h3>
-                    <p className="text-gray-700">+91 123 456 7890</p>
+                    <p className="text-gray-700">+91 8284806279/23177747709</p>
                   </div>
                 </div>
 
@@ -90,16 +109,15 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-bold">Office Location</h3>
-                    <p className="text-gray-700">123 Tech Park, Bengaluru, India</p>
+                    <p className="text-gray-700">17th Street Sinkior, Monrovia-Liberia</p>
                   </div>
                 </div>
               </div>
 
               <div className="mt-8">
-                <h3 className="font-bold mb-3">Business Hours</h3>
-                <p className="text-gray-700">Monday - Friday: 9:00 AM - 6:00 PM IST</p>
-                <p className="text-gray-700">Saturday: 10:00 AM - 2:00 PM IST</p>
-                <p className="text-gray-700">Sunday: Closed</p>
+                <div className="border border-gray-300 p-4 rounded-lg">
+                  <h1 className="text-xl font-bold mb-3">24/7 Customer Support</h1>
+                </div>
               </div>
             </div>
 

@@ -13,7 +13,7 @@ const RefundPolicy = () => {
 
           <div className="prose prose-lg max-w-none">
             <p>
-              At ContentShield, we strive to provide you with the highest quality plagiarism and AI content detection services. We understand that sometimes issues may arise, and we have established this Refund Policy to ensure transparency and fairness in our customer interactions.
+              At PlagLab, we strive to provide you with the highest quality plagiarism and AI content detection services. We understand that sometimes issues may arise, and we have established this Refund Policy to ensure transparency and fairness in our customer interactions.
             </p>
 
             <h2>Satisfaction Guarantee</h2>
@@ -105,11 +105,6 @@ const RefundPolicy = () => {
             <p>
               If you have any questions about this Refund Policy or would like to request a refund, please contact us:
             </p>
-            <ul>
-              <li>By email: support@contentshield.com</li>
-              <li>By phone: +91 123 456 7890</li>
-              <li>By mail: 123 Tech Park, Bengaluru, India</li>
-            </ul>
           </div>
         </div>
       </div>

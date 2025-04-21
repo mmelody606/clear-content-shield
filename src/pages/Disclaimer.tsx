@@ -13,7 +13,7 @@ const Disclaimer = () => {
 
           <div className="prose prose-lg max-w-none">
             <p>
-              The information provided by ContentShield ("we," "us," or "our") on our website and associated services is for general informational purposes only. All information on the site is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the site.
+              The information provided by PlagLab ("we," "us," or "our") on our website and associated services is for general informational purposes only. All information on the site is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the site.
             </p>
 
             <h2>Technology Limitations</h2>

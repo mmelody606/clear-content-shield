@@ -4,8 +4,8 @@ import { Plus, Minus } from "lucide-react";
 
 const faqs = [
   {
-    question: "How accurate is your plagiarism detection?",
-    answer: "We boast a 98% accuracy rate. Our tools compare your documents against billions of web pages, academic papers, and publications to identify matching text patterns, paraphrasing, and even cleverly disguised plagiarism."
+    question: "How accurate is your plagiarism Report?",
+    answer: "We boast a 98% accuracy rate. Our turnitin tool compare your documents against billions of documents, academic papers, and publications to identify matching text patterns, paraphrasing, and even cleverly disguised plagiarism."
   },
   {
     question: "Can your tool detect AI-generated content?",

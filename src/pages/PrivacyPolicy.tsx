@@ -13,7 +13,7 @@ const PrivacyPolicy = () => {
 
           <div className="prose prose-lg max-w-none">
             <p>
-              At ContentShield, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our plagiarism and AI content detection services. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
+              At PlagLab, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our plagiarism and AI content detection services. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
             </p>
 
             <h2>Information We Collect</h2>
@@ -103,11 +103,6 @@ const PrivacyPolicy = () => {
             <p>
               If you have any questions about this Privacy Policy, please contact us:
             </p>
-            <ul>
-              <li>By email: privacy@contentshield.com</li>
-              <li>By phone: +91 123 456 7890</li>
-              <li>By mail: 123 Tech Park, Bengaluru, India</li>
-            </ul>
           </div>
         </div>
       </div>

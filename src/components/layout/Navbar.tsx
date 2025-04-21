@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -59,9 +59,10 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:block">
-          <Button asChild>
-            <Link to="/contact">Get Started</Link>
-          </Button>
+          <a href="tel:+1234567890" className="font-medium text-primary hover:text-primary/90 flex items-center gap-2">
+            <Phone size={18} />
+            +91 (828) 480-6279
+          </a>
         </div>
 
         {/* Mobile menu button */}
@@ -128,9 +129,10 @@ const Navbar = () => {
               Contact
             </Link>
             <div className="px-4">
-              <Button asChild className="w-full">
-                <Link to="/contact">Get Started</Link>
-              </Button>
+              <a href="tel:+1234567890" className="font-medium text-primary hover:text-primary/90 flex items-center gap-2">
+                <Phone size={18} />
+                +91 (828) 480-6279
+              </a>
             </div>
           </div>
         </div>

@@ -17,7 +17,7 @@ const HeroSection = () => {
             Check for Plagiarism & AI Content Instantly! Get Your Turnitin Report Fast!
           </h1>
           <p className="text-xl text-gray-700 max-w-lg">
-            Ensure academic and professional integrity with our high-accuracy, lightning-fast, and affordably priced content verification tools.
+            Ensure academic and professional integrity with our high-accuracy, lightning-fast, and affordably priced Services utilizing the latest technology and a team of experts to manually check and edit your academic work.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button 
@@ -32,7 +32,7 @@ const HeroSection = () => {
         <div className="relative animate-fade-in">
           <div className="bg-white rounded-lg shadow-xl p-6 md:p-8 relative z-10 animate-bounce-subtle">
             <img
-              src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80"
+              src="/src/image/vector_hero.jpg"
               alt="Content checking visualization"
               className="w-full h-auto rounded-md mb-6"
             />

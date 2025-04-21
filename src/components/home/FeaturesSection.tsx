@@ -1,5 +1,5 @@
-
 import { Shield, Clock, Database, DollarSign } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const features = [
   {
@@ -25,6 +25,45 @@ const features = [
 ];
 
 const FeaturesSection = () => {
+  const [counts, setCounts] = useState({
+    checks: 0,
+    accuracy: 0,
+    customers: 0
+  });
+
+  useEffect(() => {
+    const duration = 2000; // 2 seconds for the animation
+    const steps = 50; // Number of steps in the animation
+    const interval = duration / steps;
+
+    const targetValues = {
+      checks: 10000,
+      accuracy: 98,
+      customers: 1500
+    };
+
+    let currentStep = 0;
+
+    const timer = setInterval(() => {
+      if (currentStep >= steps) {
+        clearInterval(timer);
+        setCounts(targetValues);
+        return;
+      }
+
+      const progress = currentStep / steps;
+      setCounts({
+        checks: Math.floor(targetValues.checks * progress),
+        accuracy: Math.floor(targetValues.accuracy * progress),
+        customers: Math.floor(targetValues.customers * progress)
+      });
+
+      currentStep++;
+    }, interval);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="py-16 px-4 md:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
@@ -55,24 +94,22 @@ const FeaturesSection = () => {
         </div>
 
         <div className="mt-12 flex flex-wrap justify-center gap-8">
-          {["10,000+", "98%", "1,500+", "24/7"].map((stat, index) => (
-            <div 
-              key={index}
-              className="bg-gray-50 px-8 py-6 rounded-lg flex flex-col items-center hover:shadow-md transition-all hover:scale-105"
-              style={{
-                animationDelay: `${index * 100}ms`,
-                animationFillMode: "backwards"
-              }}
-            >
-              <div className="text-3xl font-bold text-primary mb-1 animate-bounce-subtle">{stat}</div>
-              <div className="text-gray-600">
-                {index === 0 && "Checks Completed"}
-                {index === 1 && "Detection Accuracy"}
-                {index === 2 && "Happy Customers"}
-                {index === 3 && "Customer Support"}
-              </div>
-            </div>
-          ))}
+          <div className="bg-gray-50 px-8 py-6 rounded-lg flex flex-col items-center hover:shadow-md transition-all hover:scale-105">
+            <div className="text-3xl font-bold text-primary mb-1">{counts.checks.toLocaleString()}+</div>
+            <div className="text-gray-600">Checks Completed</div>
+          </div>
+          <div className="bg-gray-50 px-8 py-6 rounded-lg flex flex-col items-center hover:shadow-md transition-all hover:scale-105">
+            <div className="text-3xl font-bold text-primary mb-1">{counts.accuracy}%</div>
+            <div className="text-gray-600">Detection Accuracy</div>
+          </div>
+          <div className="bg-gray-50 px-8 py-6 rounded-lg flex flex-col items-center hover:shadow-md transition-all hover:scale-105">
+            <div className="text-3xl font-bold text-primary mb-1">{counts.customers.toLocaleString()}+</div>
+            <div className="text-gray-600">Happy Customers</div>
+          </div>
+          <div className="bg-gray-50 px-8 py-6 rounded-lg flex flex-col items-center hover:shadow-md transition-all hover:scale-105">
+            <div className="text-3xl font-bold text-primary mb-1">24/7</div>
+            <div className="text-gray-600">Customer Support</div>
+          </div>
         </div>
       </div>
     </section>
